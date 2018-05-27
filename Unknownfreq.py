@@ -15,7 +15,7 @@ for i in file1:
         continue
     j=i.split()
     testlist.append(j[0])
-    
+
 #kyoto-train.voc20k.ja>連想配列voctableに格納
 
 voctable={}
@@ -24,7 +24,7 @@ for i in file2:
     voctable[j[1]]=int(j[0])
 
 #未知語をリストunkに格納、未知語数と異なり未知語数を出力
-    
+
 unk=[]
 for i in testlist:
     if i in voctable.keys():
@@ -34,7 +34,7 @@ for i in testlist:
 print('未知語数=',len(unk))
 print('異なり未知語数=',len(set(unk)))
 print('未知語率=',len(set(unk))/len(testlist)*100,'%')
+print('もこう')
 
 file1.close()
 file2.close()
-
